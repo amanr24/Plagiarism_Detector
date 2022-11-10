@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Documents Plagiarism Detector</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="{%  static  'vendor/bootstrap/css/bootstrap.min.css'  %}" rel="stylesheet">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{%  static  'assets/css/fontawesome.css'  %}">
+    <link rel="stylesheet" href="{%  static  'assets/css/templatemo-grad-school.css'  %}">
+    <link rel="stylesheet" href="{%  static  'assets /css/owl.css'  %}">
+    <link rel="stylesheet" href="{%  static  'assets/css/lightbox.css'  %}">
+<!--
+    
+TemplateMo 557 Grad School
+
+https://templatemo.com/tm-557-grad-school
+
+-->
+  </head>
+
+<body>
+
+   
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>Plagiarism</em> Detector</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1">Upload Documents</a></li> 
+        <li class="has-submenu"><a href="#section2">How to use it?</a>
+        </li>
+        <li><a href="#section3">Change document format</a></li>
+        <!-- <li><a href="#section5">Video</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="{%  static  'assets/images/course-video.mp4'  %}" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="caption">
+              <h6>Check the originality between documents using Plagiarism Detector</h6>
+              <h2>Document <em>Plagiarism</em> Checker</h2>
+              <div class="main-button">
+                  <div class="scroll-to-section"><a href="#section2">Check for Plagiarism</a></div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <div class="features-post">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-pencil"></i>Upload .txt files</h4>
+              </div>
+              <div class="content-hide">
+                <p>Upload the file of the .txt format to be scanned here.The file should not be more than xMB</p>
+                <a href="{% url 'fileapp:home2' %}">Upload</a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post second-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-book"></i>Upload JPG Images</h4>
+              </div>
+              <div class="content-hide">
+                <p>Upload the images of the .jpg format to be scanned here.The images should not be more than xMB</p>
+                <a href="{% url 'fileapp:home2' %}">Upload</a>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post third-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-book"></i>Upload PDF's</h4>
+              </div>
+              <div class="content-hide">
+                <p>Upload the PDF of the .pdf format to be scanned here.The PDF should not be more than xMB</p>
+                <a href="{% url 'fileapp:home2' %}">Upload</a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why-us" data-section="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>How to perform a plagiarism check?</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id='tabs'>
+            <ul>
+              <li><a href='#tabs-1'>Upload Documents</a></li>
+              <li><a href='#tabs-2'>Check for Plagiarism</a></li>
+              <li><a href='#tabs-3'>Conclusion</a></li>
+            </ul>
+            <section class='tabs-content'>
+              <article id='tabs-1'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="{%  static  'assets/images/scan_image2.webp'  %}" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Upload Documents</h4>
+                    <p id = "para_font">The plagiarism checker works for files of the .txt,pdf and jpg formats only. Upload these files in their respective sections before performing a plagiarism check. There is no specific limit to the no of files that can be uploaded.However do note that more the number of files more will be the execution time. Incase a document of the respective format isnt available, the user can change the format of the document from the <a href="https://combinepdf.com">Change Document Format</a> option from the Navbar</p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-2'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="{%  static  'assets/images/plagiarism_image.png'  %}" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Check for Plagiarism</h4>
+                    <p id = "para_font">The plagiarism checkr checks for plagiarism between the uploaded files using the cosine similarity technique. It will check for plagiarism between all the documents uploaded respectively (checking for plagiarism between any 2 documents at a time, making nC2 comparisons where n is the no of documents uploaded) </p> 
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-3'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="{%  static  'assets/images/conclusion_image2.png'  %}" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Conclusion</h4>
+                    <p id = "para_font">Once the plagiarism check is over nC2 percentage values will be returned with their respective documents that were considered during the plagiarism check </p>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why-us" data-section="section3">
+    <div class="section-heading">
+      <h2><a href = "https://combinepdf.com">Tap Here to change the format of the document/compress a document</a></h2>
+    </div>
+  </section>
+
+
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p><i class="fa fa-copyright"></i> Copyright 2020 by Plagiarism Detector
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="{%  static  'vendor/jquery/jquery.min.js'  %}"></script>
+    <script src="{%  static  'vendor/bootstrap/js/bootstrap.bundle.min.js'  %}"></script>
+
+    <script src="{%  static  'assets/js/isotope.min.js'  %}"></script>
+    <script src="{%  static  'assets/js/owl-carousel.js'  %}"></script>
+    <script src="{%  static  'assets/js/lightbox.js'  %}"></script>
+    <script src="{%  static  'assets/js/tabs.js'  %}"></script>
+    <script src="{%  static  'assets/js/video.js'  %}"></script>
+    <script src="{%  static  'assets/js/slick-slider.js'  %}"></script>
+    <script src="{%  static  'assets/js/custom.js'  %}"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+</html>
