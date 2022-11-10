@@ -5,11 +5,12 @@ runs a plagiarism check on.
 
 ## Details-
 i. Easy to use as you can upload any format and multiple document and it will
-
 return the plagiarism percentage of each document in permutation and
 combination.
+
 ii. A solution loved by university teachers to check plagiarism percentage
 between the submitted student’s assignments
+
 iii. Technology used Stack: Python, CSS, MySQL, HTML, Django
 
 I used python as my core language to devlope this system. OpenCV library in python
